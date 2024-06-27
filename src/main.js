@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './styles/style.css'
 import portfolio_hero_parallax from './features/portfolio-life'
 
+console.log('it works from github')
+
 gsap.registerPlugin(ScrollTrigger)
 
 // ------------------------------------------------------------ PORTFOLIO LIFE IMAGES
