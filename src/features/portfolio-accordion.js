@@ -10,6 +10,7 @@ function accordion() {
   accordionHeaders.forEach((header) => {
     const content = header.nextElementSibling
     const icon = header.querySelector('.accordion-icon-wrap')
+    const heading = header.querySelector('.accordion-heading')
 
     gsap.set(content, { height: 'auto' })
     gsap.set(content, { height: 0 })
@@ -18,6 +19,11 @@ function accordion() {
       const isOpen = header.classList.contains('open')
 
       if (isOpen) {
+        gsap.to(heading, {
+          x: 0,
+          duration: 0.5,
+          ease: 'ease-in',
+        })
         gsap.to(content, {
           height: 0,
           duration: 1.5,
@@ -29,6 +35,11 @@ function accordion() {
           ease: 'ease-in',
         })
       } else {
+        gsap.to(heading, {
+          x: 50,
+          duration: 0.5,
+          ease: 'ease-in',
+        })
         gsap.to(content, {
           height: 'auto',
           duration: 3,

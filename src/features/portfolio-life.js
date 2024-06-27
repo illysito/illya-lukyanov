@@ -1,56 +1,32 @@
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
+function portfolio_life() {
+  const imgElements = document.querySelectorAll('.img')
 
-function portfolio_hero_parallax() {
-  gsap.to('.work-container', {
-    y: -250,
-    scrollTrigger: {
-      trigger: '.accordion',
-      pin: '.work-container',
-      pinSpacing: false,
-      start: 'top bottom',
-      end: () => '2000',
-      scrub: 1,
-    },
+  // Filter elements where 'img' is the second class
+  const filteredElements = Array.from(imgElements).filter((element) => {
+    const classList = element.className.split(' ')
+    return classList[1] === 'img' // Check if the second class is 'img'
   })
 
-  gsap.to('.w', {
-    y: 200,
-    scrollTrigger: {
-      trigger: '.accordion',
-      start: 'top 99%',
-      scrub: 1,
-    },
-  })
+  function scaledown_portfolio_img(event) {
+    // Apply GSAP animations to the clicked element
+    gsap.to(event.target, {
+      scale: 0.99,
+    })
+  }
 
-  gsap.to('.o', {
-    y: 150,
-    scrollTrigger: {
-      trigger: '.accordion',
-      start: 'top 99%',
-      scrub: 1,
-    },
-  })
+  function scaleup_portfolio_img(event) {
+    // Apply GSAP animations to the clicked element
+    gsap.to(event.target, {
+      scale: 1,
+    })
+  }
 
-  gsap.to('.r', {
-    y: 250,
-    scrollTrigger: {
-      trigger: '.accordion',
-      start: 'top 99%',
-      scrub: 1,
-    },
-  })
-
-  gsap.to('.k', {
-    y: 100,
-    scrollTrigger: {
-      trigger: '.accordion',
-      start: 'top 99%',
-      scrub: 1,
-    },
+  filteredElements.forEach((element) => {
+    element.addEventListener('mouseenter', scaledown_portfolio_img)
+    element.addEventListener('mouseleave', scaleup_portfolio_img)
   })
 }
 
-export default portfolio_hero_parallax
+export default portfolio_life

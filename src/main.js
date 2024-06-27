@@ -2,8 +2,10 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import './styles/style.css'
+import hover_lines from './features/accordion-hover-lines'
 import accordion from './features/portfolio-accordion'
-import portfolio_hero_parallax from './features/portfolio-life'
+import portfolio_hero_parallax from './features/portfolio-hero-parallax'
+import portfolio_life from './features/portfolio-life'
 
 console.log('it works from github')
 
@@ -11,32 +13,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 // ------------------------------------------------------------ PORTFOLIO LIFE IMAGES
 
-const imgElements = document.querySelectorAll('.img')
-
-// Filter elements where 'img' is the second class
-const filteredElements = Array.from(imgElements).filter((element) => {
-  const classList = element.className.split(' ')
-  return classList[1] === 'img' // Check if the second class is 'img'
-})
-
-function scaledown_portfolio_img(event) {
-  // Apply GSAP animations to the clicked element
-  gsap.to(event.target, {
-    scale: 0.99,
-  })
-}
-
-function scaleup_portfolio_img(event) {
-  // Apply GSAP animations to the clicked element
-  gsap.to(event.target, {
-    scale: 1,
-  })
-}
-
-filteredElements.forEach((element) => {
-  element.addEventListener('mouseenter', scaledown_portfolio_img)
-  element.addEventListener('mouseleave', scaleup_portfolio_img)
-})
+portfolio_life()
 
 // ------------------------------------------------------------ PORTFOLIO PARALLAX //
 
@@ -45,3 +22,4 @@ portfolio_hero_parallax()
 // ------------------------------------------------------------ PORTFOLIO ACCORDION //
 
 accordion()
+hover_lines()
