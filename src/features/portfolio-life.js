@@ -4,6 +4,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 function portfolio_hero_parallax() {
+  gsap.to('.work-container', {
+    y: -250,
+    scrollTrigger: {
+      trigger: '.accordion',
+      pin: '.work-container',
+      pinSpacing: false,
+      start: 'top bottom',
+      end: () => '2000',
+      scrub: 1,
+    },
+  })
+
   gsap.to('.w', {
     y: 200,
     scrollTrigger: {
