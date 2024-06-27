@@ -2,6 +2,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import './styles/style.css'
+import accordion from './features/portfolio-accordion'
 import portfolio_hero_parallax from './features/portfolio-life'
 
 console.log('it works from github')
@@ -40,3 +41,7 @@ filteredElements.forEach((element) => {
 // ------------------------------------------------------------ PORTFOLIO PARALLAX //
 
 portfolio_hero_parallax()
+
+// ------------------------------------------------------------ PORTFOLIO ACCORDION //
+
+accordion()
