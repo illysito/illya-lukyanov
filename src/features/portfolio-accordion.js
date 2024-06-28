@@ -26,7 +26,7 @@ function accordion() {
         })
         gsap.to(content, {
           height: 0,
-          duration: 1.5,
+          duration: 0.7,
           ease: 'ease-in',
         })
         gsap.to(icon, {
@@ -42,7 +42,7 @@ function accordion() {
         })
         gsap.to(content, {
           height: 'auto',
-          duration: 3,
+          duration: 0.7,
           ease: 'ease-in',
         })
         gsap.to(icon, {
