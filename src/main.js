@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import './styles/style.css'
 import hover_lines from './features/accordion-hover-lines'
+import swap_type from './features/menu'
 import accordion from './features/portfolio-accordion'
 import portfolio_hero_parallax from './features/portfolio-hero-parallax'
 import portfolio_life from './features/portfolio-life'
@@ -23,3 +24,7 @@ portfolio_hero_parallax()
 
 accordion()
 hover_lines()
+
+// ------------------------------------------------------------ MENU TYPE //
+
+swap_type()
