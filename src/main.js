@@ -7,6 +7,7 @@ import swap_type from './features/menu'
 import accordion from './features/portfolio-accordion'
 import portfolio_hero_parallax from './features/portfolio-hero-parallax'
 import portfolio_life from './features/portfolio-life'
+import swap_posters from './features/portfolio_swap'
 
 console.log('it works from github')
 
@@ -14,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 // ------------------------------------------------------------ PORTFOLIO LIFE IMAGES
 
+swap_posters()
 portfolio_life()
 
 // ------------------------------------------------------------ PORTFOLIO PARALLAX //
