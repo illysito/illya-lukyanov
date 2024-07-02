@@ -1,7 +1,11 @@
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 function accordion() {
   const accordionHeaders = document.querySelectorAll('.accordion-header')
+  // const logosWrapper = document.querySelectorAll('.content-wrapper-logos')
 
   // Debugging: Check if accordion headers are selected
   console.log('Accordion Headers:', accordionHeaders)
@@ -28,7 +32,14 @@ function accordion() {
           height: 0,
           duration: 0.7,
           ease: 'ease-in',
+          // onComplete: () => {
+          //   ScrollTrigger.refresh()
+          // },
         })
+        // gsap.to(logosWrapper, {
+        //   height: 0,
+        //   duration: 0,
+        // })
         gsap.to(icon, {
           rotation: 0,
           duration: 1,
@@ -44,6 +55,9 @@ function accordion() {
           height: 'auto',
           duration: 0.7,
           ease: 'ease-in',
+          // onComplete: () => {
+          //   ScrollTrigger.refresh()
+          // },
         })
         gsap.to(icon, {
           rotation: 45,
@@ -51,8 +65,8 @@ function accordion() {
           ease: 'ease-in',
         })
       }
-
       header.classList.toggle('open')
+      // ScrollTrigger.refresh()
     })
   })
 }
