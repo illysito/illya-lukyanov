@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './styles/style.css'
 
 import hover_lines from './features/accordion-hover-lines'
-import contacto from './features/contacto'
 import swap_type from './features/menu'
 import packaging_parallax from './features/packaging-parallax'
 import accordion from './features/portfolio-accordion'
@@ -34,6 +33,8 @@ hover_lines()
 
 swap_type()
 
-contacto()
+// ------------------------------------------------------------ PACKAGING PARALLAX //
 
 packaging_parallax()
+
+// ------------------------------------------------------------ CONTACT BLOCKS //
