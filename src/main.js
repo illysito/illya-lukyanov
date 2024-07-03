@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './styles/style.css'
 
 import hover_lines from './features/accordion-hover-lines'
+import hero_type from './features/hero'
 import swap_type from './features/menu'
 import packaging_parallax from './features/packaging-parallax'
 import accordion from './features/portfolio-accordion'
@@ -15,6 +16,10 @@ import split_type from './features/split-type'
 console.log('it works from github')
 
 gsap.registerPlugin(ScrollTrigger)
+
+// ------------------------------------------------------------ HERO TYPE
+
+hero_type()
 
 // ------------------------------------------------------------ PORTFOLIO LIFE IMAGES
 
