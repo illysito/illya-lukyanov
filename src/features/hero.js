@@ -4,6 +4,7 @@ function hero_type() {
   let swap_duration = 0
   let swap_delay = 1.2
   let mm = gsap.matchMedia()
+  console.log('hey')
 
   mm.add('(min-width:478px)', () => {
     gsap.to('.soy-illy-wrapper', {
