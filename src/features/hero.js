@@ -2,7 +2,7 @@ import { gsap } from 'gsap'
 
 function hero_type() {
   function isMobile() {
-    return window.innerWidth <= 768 // or use any threshold you consider as mobile
+    return window.innerWidth <= 478 // or use any threshold you consider as mobile
   }
 
   if (isMobile()) {
