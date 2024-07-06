@@ -9,11 +9,11 @@ function preloader_animation() {
     console.log('mobile')
     gsap.to('.preloader-counter-wrapper', {
       opacity: 0,
-      delay: 3.5,
+      delay: 4,
       duration: 1,
     })
     gsap.to('.preloader-overlay-mobile', {
-      delay: 3.5,
+      delay: 4,
       opacity: 0,
       ease: 'power4.inOut',
       onComplete: () => {
@@ -30,14 +30,14 @@ function preloader_animation() {
   } else {
     gsap.to('.preloader-counter-wrapper', {
       opacity: 0,
-      delay: 3.5,
+      delay: 4,
       duration: 1,
     })
     gsap.to('.preload-layer', {
-      delay: 3.5,
+      delay: 4,
       opacity: 0,
       stagger: {
-        amount: 0.9,
+        amount: 1.2,
         from: 'random',
       },
       ease: 'power4.inOut',

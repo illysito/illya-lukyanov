@@ -28,9 +28,9 @@ function init() {
 
   if (!preloaderShown) {
     // Show the preloader if it hasn't been shown before
-    // document.querySelector('.preloader-counter-wrapper').style.display = 'flex'
+    document.querySelector('.preloader-counter-wrapper').style.display = 'flex'
     document.querySelector('.preloader-overlay-desktop').style.display = 'flex'
-    // document.querySelector('.preloader-overlay-mobile').style.display = 'flex'
+    document.querySelector('.preloader-overlay-mobile').style.display = 'flex'
     preloader_count()
     preloader_animation()
   } else {
