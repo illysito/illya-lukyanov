@@ -11,6 +11,8 @@ import accordion from './features/portfolio-accordion'
 import portfolio_hero_parallax from './features/portfolio-hero-parallax'
 import portfolio_life from './features/portfolio-life'
 import swap_posters from './features/portfolio_swap'
+import preloader_count from './features/preloader'
+import preloader_animation from './features/preloader_animation'
 import split_type from './features/split-type'
 
 console.log('it works from github')
@@ -20,6 +22,8 @@ gsap.registerPlugin(ScrollTrigger)
 // ------------------------------------------------------------ HERO TYPE
 
 hero_type()
+preloader_count()
+preloader_animation()
 
 // ------------------------------------------------------------ PORTFOLIO LIFE IMAGES
 
