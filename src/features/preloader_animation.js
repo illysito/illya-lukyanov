@@ -7,7 +7,6 @@ function preloader_animation() {
 
   if (isMobile()) {
     console.log('mobile')
-    let complete = false
     gsap.to('.preloader-counter-wrapper', {
       opacity: 0,
       delay: 3.5,
@@ -18,13 +17,10 @@ function preloader_animation() {
       opacity: 0,
       ease: 'power4.inOut',
       onComplete: () => {
-        complete = true
+        document.querySelector('.preloader-counter-wrapper').style.zIndez = 0
+        document.querySelector('.preloader-overlay-mobile').style.zIndex = 0
       },
     })
-    if (complete) {
-      document.querySelector('.preloader-counter-wrapper').style.zIndez = 0
-      document.querySelector('.preloader-overlay-mobile').style.zIndex = 0
-    }
   } else {
     gsap.to('.preloader-counter-wrapper', {
       opacity: 0,
