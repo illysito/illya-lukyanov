@@ -23,6 +23,8 @@ function preloader_animation() {
           'none'
         document.querySelector('.preloader-overlay-mobile').style.display =
           'none'
+        document.querySelector('.preloader-overlay-desktop').style.display =
+          'none'
       },
     })
   } else {
