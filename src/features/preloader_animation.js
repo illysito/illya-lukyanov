@@ -16,6 +16,8 @@ function preloader_animation() {
       opacity: 0,
       ease: 'power4.inOut',
     })
+    document.querySelector('.preloader-counter-wrapper').style.display = 'none'
+    document.querySelector('.preloader-overlay-mobile').style.display = 'none'
   } else {
     gsap.to('.preloader-counter-wrapper', {
       opacity: 0,
