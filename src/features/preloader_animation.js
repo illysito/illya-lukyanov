@@ -19,8 +19,10 @@ function preloader_animation() {
       onComplete: () => {
         document.querySelector('.preloader-counter-wrapper').style.zIndez = 0
         document.querySelector('.preloader-overlay-mobile').style.zIndex = 0
-        document.querySelector('.preloader-counter-wrapper').style.display = 'none'
-        document.querySelector('.preloader-overlay-mobile').style.display = 'none'
+        document.querySelector('.preloader-counter-wrapper').style.display =
+          'none'
+        document.querySelector('.preloader-overlay-mobile').style.display =
+          'none'
       },
     })
   } else {
