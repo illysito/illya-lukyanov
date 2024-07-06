@@ -4,8 +4,10 @@ function preloader_count() {
 
   function updateCounter() {
     if (currentValue === 100) {
+      // localStorage.setItem('preloaderShown', 'true')
       return
     }
+    console.log('we in')
     currentValue += Math.floor(Math.random() * 10)
     if (currentValue > 100) {
       currentValue = 100

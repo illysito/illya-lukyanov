@@ -6,7 +6,6 @@ function preloader_animation() {
   }
 
   if (isMobile()) {
-    console.log('Animations are disabled on mobile.') // Exit the function if on mobile
     gsap.to('.preloader-counter-wrapper', {
       opacity: 0,
       delay: 3.5,
