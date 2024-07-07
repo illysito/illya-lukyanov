@@ -41,6 +41,16 @@ function preloader_animation() {
         from: 'random',
       },
       ease: 'power4.inOut',
+      onComplete: () => {
+        document.querySelector('.preloader-counter-wrapper').style.zIndez = 0
+        document.querySelector('.preloader-overlay-mobile').style.zIndex = 0
+        document.querySelector('.preloader-counter-wrapper').style.display =
+          'none'
+        document.querySelector('.preloader-overlay-mobile').style.display =
+          'none'
+        document.querySelector('.preloader-overlay-desktop').style.display =
+          'none'
+      },
     })
   }
 }
