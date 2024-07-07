@@ -19,7 +19,7 @@ console.log('it works from github')
 
 gsap.registerPlugin(ScrollTrigger)
 
-// ------------------------------------------------------------ HERO TYPE
+// ------------------------------------------------------------ HERO TYPE!
 
 hero_type()
 function init() {
