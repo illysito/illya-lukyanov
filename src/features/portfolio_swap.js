@@ -17,7 +17,7 @@ function swap_posters() {
     autoAlpha: 0,
     duration: animation_time,
     delay: 1 * delay_time,
-    ease: 'ease-inOut',
+    ease: 'ease-Out',
     repeat: -1,
     repeatDelay: 3 * delay_time,
   })
